@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 using EnhancedTouch = UnityEngine.InputSystem.EnhancedTouch;
 
 /// <summary>
-/// Detecta tap, doble tap, long press, drag, swipe y pinch.
-/// Las distancias se miden en cm para que funcione igual en cualquier pantalla.
-/// Es el primero en ejecutarse para que otros scripts puedan suscribirse a sus eventos en Update().
+/// Detects tap, double tap, long press, drag, swipe and pinch.<br/>
+/// Distances are measured in cm so it behaves the same on any screen.<br/>
+/// It runs first so other scripts can subscribe to its events in Update().
 /// </summary>
 [DefaultExecutionOrder(-100)]
 public class GestureDetector : MonoBehaviour
@@ -42,7 +42,7 @@ public class GestureDetector : MonoBehaviour
 
     float mouseScrollPinchPx = 60f;
 
-    // Eventos (posiciones en píxeles de pantalla)
+    // Events (positions in screen pixels)
     public event Action<Vector2> OnTap;
     public event Action<Vector2> OnDoubleTap;
     public event Action<Vector2> OnLongPress;
@@ -52,7 +52,10 @@ public class GestureDetector : MonoBehaviour
     public event Action<Vector2, Vector2> OnSwipe;
     public event Action<float, Vector2> OnPinch;
 
-    // Fases de un contacto (dedo o ratón)
+    /// <summary>
+    /// Phases of a contact.<br/>
+    /// Began, Moved, Stationary, Ended, Canceled.
+    /// </summary>
     enum GesturePhase { Began, Moved, Stationary, Ended, Canceled }
 
     struct Contact
@@ -84,7 +87,7 @@ public class GestureDetector : MonoBehaviour
         if (instance == null) instance = this;
         else if (instance != this)
         {
-            Debug.LogWarning("[GestureDetector] Ya hay otro GestureDetector en la escena; se desactiva este.");
+            Debug.LogWarning("[GestureDetector] There is already another GestureDetector in the scene; this one is being disabled.");
             enabled = false;
             Destroy(this);
             return;
@@ -101,8 +104,8 @@ public class GestureDetector : MonoBehaviour
     {
         ReadContacts();
 
-        // Confirmar tap simple si ya pasó la ventana del doble tap.
-        // Si hay un dedo nuevo apoyado, se compara con el momento en que empezó.
+        // Confirm a single tap once the double tap window has passed.
+        // If a new finger is already down, compare against the moment it started.
         if (pendingTap)
         {
             float reference = tracking ? startTime : Time.unscaledTime;
@@ -126,7 +129,7 @@ public class GestureDetector : MonoBehaviour
 
 
     /// <summary>
-    /// Lee los toques activos y los guarda en el array de contactos.
+    /// Reads the active touches and stores them in the contacts array.
     /// </summary>
     void ReadContacts()
     {
@@ -143,12 +146,12 @@ public class GestureDetector : MonoBehaviour
             };
         }
 
-        // Sin toques reales y en PC/editor: simular con el ratón
+        // No real touches on PC/editor: simulate with the mouse
         if (contactCount == 0 && !Application.isMobilePlatform) ReadMouse();
     }
 
     /// <summary>
-    /// Lee el estado del ratón y lo traduce a un contacto simulado.
+    /// Reads the mouse state and translates it into a simulated contact.
     /// </summary>
     void ReadMouse()
     {
@@ -175,17 +178,17 @@ public class GestureDetector : MonoBehaviour
         }
         lastMousePos = pos;
 
-        // La rueda del ratón simula el pinch (arriba = zoom in)
+        // The mouse wheel simulates pinch (up = zoom in)
         float scroll = mouse.scroll.ReadValue().y;
         if (Mathf.Abs(scroll) > 0.01f)
             OnPinch?.Invoke(Mathf.Sign(scroll) * mouseScrollPinchPx, pos);
     }
 
     /// <summary>
-    /// Convierte el TouchPhase de InputSystem al GesturePhase interno.
+    /// Converts the InputSystem TouchPhase to the internal GesturePhase.
     /// </summary>
-    /// <param name="p">El TouchPhase de InputSystem.</param>
-    /// <returns>El GesturePhase correspondiente.</returns>
+    /// <param name="p">The InputSystem TouchPhase.</param>
+    /// <returns>The matching GesturePhase.</returns>
     static GesturePhase ConvertPhase(UnityEngine.InputSystem.TouchPhase p)
     {
         switch (p)
@@ -198,13 +201,12 @@ public class GestureDetector : MonoBehaviour
         }
     }
 
-
-    #region Lógica de gestos
+#region Gesture logic
 
     /// <summary>
-    /// Maneja un toque individual (Tap).
+    /// Handles a single touch (tap, long press, drag).
     /// </summary>
-    /// <param name="c">El contacto a manejar.</param>
+    /// <param name="c">The contact to handle.</param>
     void HandleSingleTouch(Contact c)
     {
         switch (c.phase)
@@ -253,9 +255,9 @@ public class GestureDetector : MonoBehaviour
     }
 
     /// <summary>
-    /// Finaliza el toque actual, disparando los eventos correspondientes según la duración y distancia del gesto.
+    /// Ends the current touch, firing the matching events depending on the gesture's duration and distance.
     /// </summary>
-    /// <param name="endPos">La posición final del toque.</param>
+    /// <param name="endPos">The final position of the touch.</param>
     void EndTouch(Vector2 endPos)
     {
         float duration = Time.unscaledTime - startTime;
@@ -278,9 +280,9 @@ public class GestureDetector : MonoBehaviour
     }
 
     /// <summary>
-    /// Registra un tap y determina si es un tap simple o un doble tap, disparando los eventos correspondientes.
+    /// Registers a tap and determines whether it is a single tap or a double tap, firing the matching events.
     /// </summary>
-    /// <param name="pos">La posición del tap.</param>
+    /// <param name="pos">The position of the tap.</param>
     void RegisterTap(Vector2 pos)
     {
         bool isDouble = pendingTap
@@ -302,7 +304,7 @@ public class GestureDetector : MonoBehaviour
     }
 
     /// <summary>
-    /// Interrumpe el toque actual cerrando el drag si lo había.
+    /// Interrupts the current touch, closing the drag if there was one.
     /// </summary>
     void AbortTouch()
     {
@@ -311,7 +313,7 @@ public class GestureDetector : MonoBehaviour
     }
 
     /// <summary>
-    /// Reinicia el estado de seguimiento del toque, cancelando cualquier gesto en curso.
+    /// Resets the touch tracking state, cancelling any gesture in progress.
     /// </summary>
     void ResetTouch()
     {
@@ -321,11 +323,11 @@ public class GestureDetector : MonoBehaviour
     }
 
     /// <summary>
-    /// Maneja el gesto de pinch entre dos contactos, calculando la diferencia de distancia entre los dedos y disparando el 
-    /// evento OnPinch.
+    /// Handles the pinch gesture between two contacts, computing the change in distance between the fingers
+    /// and firing the OnPinch event.
     /// </summary>
-    /// <param name="a">El primer contacto del pinch.</param>
-    /// <param name="b">El segundo contacto del pinch.</param>
+    /// <param name="a">The first contact of the pinch.</param>
+    /// <param name="b">The second contact of the pinch.</param>
     void HandlePinch(Contact a, Contact b)
     {
         Vector2 prevA = a.position - a.delta;
@@ -339,16 +341,16 @@ public class GestureDetector : MonoBehaviour
     }
 
     /// <summary>
-    /// Convierte una posición de pantalla (en píxeles) a coordenadas del mundo, 
-    /// usando la cámara especificada o la cámara principal si no se proporciona.
+    /// Converts a screen position (in pixels) to world coordinates,
+    /// using the given camera or the main camera if none is provided.
     /// </summary>
-    /// <param name="screenPos">La posición en pantalla (en píxeles) a convertir.</param>
-    /// <param name="cam">La cámara a usar para la conversión. Si es null, se usa la cámara principal.</param>
-    /// <returns>La posición en coordenadas del mundo.</returns>
+    /// <param name="screenPos">The screen position (in pixels) to convert.</param>
+    /// <param name="cam">The camera to use for the conversion. If null, the main camera is used.</param>
+    /// <returns>The position in world coordinates.</returns>
     public static Vector2 ToWorld(Vector2 screenPos, Camera cam = null)
     {
         cam = cam != null ? cam : Camera.main;
         return cam.ScreenToWorldPoint(screenPos);
     }
-    #endregion
+#endregion
 }
