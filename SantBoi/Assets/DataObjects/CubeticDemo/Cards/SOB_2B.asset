@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df99ee2981a2cf43ab094daf087200b, type: 3}
+  m_Name: SOB_2B
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: SOB_2B
+  character: {fileID: 11400000, guid: 9759b7e6baae5a84cb06d673c47bafa4, type: 2}
+  scene: Oficina
+  text: Otro error de Marc, y otro. Llevas tres correcciones esta semana y tu trabajo
+    se acumula.
+  mainValue: 5
+  difficulty: 2
+  debrief: "Taparle proteg\xEDa a Marc hoy, pero no resolv\xEDa nada. Tercera v\xEDa:
+    hablar con \xE9l y repartir la carga con el resto del equipo."
+  left:
+    text: "Ahora s\xED, hablo con \xE9l."
+    effects:
+    - value: 5
+      amount: 10
+    - value: 1
+      amount: 5
+    - value: 0
+      amount: -5
+  right:
+    text: "Sigo corrigiendo, ya pasar\xE1."
+    effects:
+    - value: 0
+      amount: 5
+    - value: 5
+      amount: -20
+    - value: 1
+      amount: -5

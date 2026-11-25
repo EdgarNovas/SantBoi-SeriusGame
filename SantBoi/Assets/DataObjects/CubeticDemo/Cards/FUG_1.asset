@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df99ee2981a2cf43ab094daf087200b, type: 3}
+  m_Name: FUG_1
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: FUG_1
+  character: {fileID: 11400000, guid: 8c3c5ad6625de6e438d99b484b2fbf7b, type: 2}
+  scene: Calle
+  text: "Has visto en un borrador interno que la piscina de La Muntanyeta cerrar\xE1
+    en verano por obras. A\xFAn no es oficial. Tu vecina te pregunta si es verdad."
+  mainValue: 1
+  difficulty: 1
+  debrief: "Ayudar a una vecina frente a respetar que la informaci\xF3n a\xFAn no
+    es p\xFAblica. Tercera v\xEDa: decirle que habr\xE1 novedades pronto y d\xF3nde
+    se publicar\xE1n."
+  left:
+    text: "Le digo que no puedo hablar de eso todav\xEDa."
+    effects:
+    - value: 1
+      amount: 5
+    - value: 0
+      amount: 5
+    - value: 4
+      amount: -10
+  right:
+    text: "Le cuento lo que s\xE9, que se organice."
+    effects:
+    - value: 4
+      amount: 10
+    - value: 1
+      amount: -20

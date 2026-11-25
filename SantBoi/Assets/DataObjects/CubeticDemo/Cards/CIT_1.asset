@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df99ee2981a2cf43ab094daf087200b, type: 3}
+  m_Name: CIT_1
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: CIT_1
+  character: {fileID: 11400000, guid: 23f775a64e498c1479eeafeb6c83d330, type: 2}
+  scene: "Mostrador de atenci\xF3n"
+  text: "Dolors, de 82 a\xF1os, no sabe pedir cita por internet y le han dicho que
+    ya solo se puede as\xED. Detr\xE1s hay cola."
+  mainValue: 4
+  difficulty: 1
+  debrief: "Atender a la persona que tienes delante frente a no hacer esperar a la
+    cola. Tercera v\xEDa: pedirle la cita ahora y darle una hoja con los pasos para
+    la pr\xF3xima vez."
+  left:
+    text: "Te acompa\xF1o paso a paso con el m\xF3vil."
+    effects:
+    - value: 4
+      amount: 10
+    - value: 5
+      amount: 5
+    - value: 0
+      amount: -10
+  right:
+    text: Te la pido yo y seguimos.
+    effects:
+    - value: 0
+      amount: 10
+    - value: 4
+      amount: -5
+    - value: 1
+      amount: -5

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df99ee2981a2cf43ab094daf087200b, type: 3}
+  m_Name: CIT_2A
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: CIT_2A
+  character: {fileID: 11400000, guid: 23f775a64e498c1479eeafeb6c83d330, type: 2}
+  scene: "Mostrador de atenci\xF3n"
+  text: "Dolors vuelve con tres amigas del casal. \xABNos ha dicho que t\xFA ense\xF1as.\xBB
+    La cola llega a la puerta."
+  mainValue: 0
+  difficulty: 2
+  debrief: "Resolver hoy frente a resolver para muchas personas m\xE1s adelante.
+    Tercera v\xEDa: atender lo urgente hoy y apuntarlas para el taller."
+  left:
+    text: "Os propongo un taller en el casal otro d\xEDa."
+    effects:
+    - value: 0
+      amount: 10
+    - value: 2
+      amount: 5
+    - value: 4
+      amount: -5
+  right:
+    text: Las atiendo ahora, una a una.
+    effects:
+    - value: 4
+      amount: 10
+    - value: 5
+      amount: -10
+    - value: 0
+      amount: -5
