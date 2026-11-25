@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df99ee2981a2cf43ab094daf087200b, type: 3}
+  m_Name: ASO_1
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: ASO_1
+  character: {fileID: 11400000, guid: 2293374aa1dc9e7419315e39e90bde58, type: 2}
+  scene: Sala de reuniones
+  text: "Rosa quiere cambiar el horario del centro c\xEDvico. Pau, de la asociaci\xF3n
+    de vecinos, se entera y pide que se les consulte antes."
+  mainValue: 2
+  difficulty: 1
+  debrief: "Decidir r\xE1pido frente a contar con quien se ve afectado. Tercera v\xEDa:
+    decidir un horario provisional y revisarlo con el barrio en un mes."
+  left:
+    text: "Propongo a Rosa una reuni\xF3n con la asociaci\xF3n."
+    effects:
+    - value: 2
+      amount: 10
+    - value: 1
+      amount: 5
+    - value: 0
+      amount: -10
+  right:
+    text: "Les informo cuando est\xE9 decidido."
+    effects:
+    - value: 0
+      amount: 10
+    - value: 1
+      amount: -5
+    - value: 2
+      amount: -10

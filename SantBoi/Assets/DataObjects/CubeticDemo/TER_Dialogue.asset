@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5682201996843244092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: bf745901-f63c-4136-a6a9-8f57605248fa
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogo.DialogoNode
+  isPlayerSpeaking: 1
+  speakerName:
+    translations:
+    - language: 34
+      text: Vecino
+    - language: 10
+      text: 
+  dialogo:
+    translations:
+    - language: 34
+      text: "Una jornada despu\xE9s  \xB7  Calle"
+    - language: 10
+      text: 
+  followingCard: {fileID: 11400000, guid: d26187788f33ddf4380608ad4374ee7b, type: 2}
+  leftCardDestination: {fileID: 0}
+  rightCardDestination: {fileID: 0}
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 380
+    y: 95
+    width: 200
+    height: 160
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93760c4d873707f4097bac1200685602, type: 3}
+  m_Name: TER_Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogo.DialoguesAssetMenu
+  nodes:
+  - {fileID: 6314273799686835591}
+  - {fileID: -5682201996843244092}
+  - {fileID: 1217023294672845369}
+  - {fileID: 6396662283364959477}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &1217023294672845369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 39fbd6d6-35aa-4bc2-a6b4-e7fb87a99cac
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogo.DialogoNode
+  isPlayerSpeaking: 1
+  speakerName:
+    translations:
+    - language: 34
+      text: "N\xFAria"
+    - language: 10
+      text: 
+  dialogo:
+    translations:
+    - language: 34
+      text: "Una jornada despu\xE9s  \xB7  Mostrador de atenci\xF3n"
+    - language: 10
+      text: 
+  followingCard: {fileID: 11400000, guid: 61bb5ad4933325f40af31b62cc1a5404, type: 2}
+  leftCardDestination: {fileID: 0}
+  rightCardDestination: {fileID: 6396662283364959477}
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 380
+    y: 605
+    width: 200
+    height: 160
+--- !u!114 &6314273799686835591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: d2cee79d-8bba-4412-93fa-0c0010320328
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogo.DialogoNode
+  isPlayerSpeaking: 0
+  speakerName:
+    translations:
+    - language: 34
+      text: Jordi
+    - language: 10
+      text: 
+  dialogo:
+    translations:
+    - language: 34
+      text: "Primera jornada  \xB7  Mostrador de atenci\xF3n"
+    - language: 10
+      text: 
+  followingCard: {fileID: 11400000, guid: 51d856ebe180c2c47bed029b25976794, type: 2}
+  leftCardDestination: {fileID: -5682201996843244092}
+  rightCardDestination: {fileID: 1217023294672845369}
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 60
+    y: 350
+    width: 200
+    height: 160
+--- !u!114 &6396662283364959477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 0ff2f5de-622b-4cfb-823e-82edfb6bd5b9
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogo.DialogoNode
+  isPlayerSpeaking: 0
+  speakerName:
+    translations:
+    - language: 34
+      text: Rosa
+    - language: 10
+      text: 
+  dialogo:
+    translations:
+    - language: 34
+      text: "Dos jornadas despu\xE9s  \xB7  Sala de reuniones"
+    - language: 10
+      text: 
+  followingCard: {fileID: 11400000, guid: db50bc11f17c7954b9e33f2675f776c0, type: 2}
+  leftCardDestination: {fileID: 0}
+  rightCardDestination: {fileID: 0}
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 700
+    y: 605
+    width: 200
+    height: 160

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor.U2D.Animation;
 using UnityEngine;
 
 public enum Values { PROACTIVITY, COMMUNICATION, PARTICIPATION, RECOGNITION, EMPATHY, CARE }
@@ -47,6 +46,7 @@ public class CardData : ScriptableObject
     [SerializeField, TextArea(2, 6)] string text;
     [SerializeField] Values mainValue;
     [SerializeField, Min(0)] int difficulty;
+    [SerializeField, TextArea(2, 6)] string debrief;
 
     [Header("Left decision")]
     [SerializeField] CardDecision left = new CardDecision();
@@ -60,6 +60,7 @@ public class CardData : ScriptableObject
     public string Text => text;
     public Values MainValue => mainValue;
     public int Difficulty => difficulty;
+    public string Debrief => debrief;
 
     /// <summary>Returns the decision for the chosen side.</summary>
     public CardDecision GetDecision(CardChoice choice) => choice == CardChoice.Left ? left : right;

@@ -88,6 +88,12 @@ public class CardMovement : GestureReceiver
         OnDragProgress?.Invoke(0f);
     }
 
+    public void ChooseSide(CardChoice choice)
+    {
+        if (isActiveAndEnabled && (state == State.Idle || state == State.Returning))
+            Commit(choice);
+    }
+
     #region Gestures
     protected override void OnDragStart(Vector2 screenPos)
     {

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df99ee2981a2cf43ab094daf087200b, type: 3}
+  m_Name: SEL_1
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: SEL_1
+  character: {fileID: 11400000, guid: 5ae56fd301d27794b87403d83922b20e, type: 2}
+  scene: Recursos humanos
+  text: "Un familiar se presenta a una selecci\xF3n. Te toca tramitar las primeras
+    solicitudes y el equipo va justo de tiempo."
+  mainValue: 1
+  difficulty: 1
+  debrief: 
+  left:
+    text: Aviso y pido que otro revise todo el lote.
+    effects:
+    - value: 1
+      amount: 10
+    - value: 0
+      amount: -5
+  right:
+    text: Aviso y solo registro las solicitudes.
+    effects:
+    - value: 0
+      amount: 5
+    - value: 5
+      amount: -5

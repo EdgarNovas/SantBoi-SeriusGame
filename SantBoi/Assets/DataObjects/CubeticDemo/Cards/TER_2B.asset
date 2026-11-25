@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df99ee2981a2cf43ab094daf087200b, type: 3}
+  m_Name: TER_2B
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: TER_2B
+  character: {fileID: 11400000, guid: 240c2354296f05b4ca354b39f90c01cc, type: 2}
+  scene: "Mostrador de atenci\xF3n"
+  text: "N\xFAria, de la florister\xEDa de al lado, ha o\xEDdo que a Jordi le adelantaste
+    la licencia. Quiere lo mismo para su puesto de Sant Jordi."
+  mainValue: 3
+  difficulty: 2
+  debrief: "Un favor peque\xF1o se convierte en costumbre cuando otros lo ven. Tercera
+    v\xEDa: reconocer el error y pedir un criterio claro para las urgencias de fiestas."
+  left:
+    text: Fue un error. A partir de ahora, todo por orden.
+    effects:
+    - value: 3
+      amount: 10
+    - value: 1
+      amount: 10
+    - value: 4
+      amount: -5
+  right:
+    text: "Vale, tambi\xE9n te la adelanto."
+    effects:
+    - value: 4
+      amount: 5
+    - value: 3
+      amount: -20
+    - value: 0
+      amount: -5

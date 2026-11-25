@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4508356709927735067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 6c76764d-36cd-4099-b19e-2edf020b2fd4
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogo.DialogoNode
+  isPlayerSpeaking: 1
+  speakerName:
+    translations:
+    - language: 34
+      text: Dolors
+    - language: 10
+      text: 
+  dialogo:
+    translations:
+    - language: 34
+      text: "Una jornada despu\xE9s  \xB7  Mostrador de atenci\xF3n"
+    - language: 10
+      text: 
+  followingCard: {fileID: 11400000, guid: 93c772e530e2be0409b67269e53d1b82, type: 2}
+  leftCardDestination: {fileID: -4043966250103914429}
+  rightCardDestination: {fileID: 0}
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 380
+    y: 95
+    width: 200
+    height: 160
+--- !u!114 &-4043966250103914429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 2cfc30a2-9603-4a6a-be95-3cd112f7313e
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogo.DialogoNode
+  isPlayerSpeaking: 0
+  speakerName:
+    translations:
+    - language: 34
+      text: "F\xE0tima"
+    - language: 10
+      text: 
+  dialogo:
+    translations:
+    - language: 34
+      text: "Dos jornadas despu\xE9s  \xB7  Sala de reuniones"
+    - language: 10
+      text: 
+  followingCard: {fileID: 11400000, guid: 96c0f5ad2cb4806448587e57c7d18c1b, type: 2}
+  leftCardDestination: {fileID: 0}
+  rightCardDestination: {fileID: 0}
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 700
+    y: 95
+    width: 200
+    height: 160
+--- !u!114 &-2422557843807868437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 1a7d54e2-f353-4e6d-8ff0-aafcc5fd6150
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogo.DialogoNode
+  isPlayerSpeaking: 1
+  speakerName:
+    translations:
+    - language: 34
+      text: Dolors
+    - language: 10
+      text: 
+  dialogo:
+    translations:
+    - language: 34
+      text: "Una jornada despu\xE9s  \xB7  Mostrador de atenci\xF3n"
+    - language: 10
+      text: 
+  followingCard: {fileID: 11400000, guid: af9dc872e2bd1fb4d8120de36e298068, type: 2}
+  leftCardDestination: {fileID: 0}
+  rightCardDestination: {fileID: 0}
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 380
+    y: 605
+    width: 200
+    height: 160
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93760c4d873707f4097bac1200685602, type: 3}
+  m_Name: CIT_Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogo.DialoguesAssetMenu
+  nodes:
+  - {fileID: 4972852479170760601}
+  - {fileID: -4508356709927735067}
+  - {fileID: -4043966250103914429}
+  - {fileID: -2422557843807868437}
+  newNodeOffset: {x: 200, y: 0}
+--- !u!114 &4972852479170760601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5306911cf2b5e47b0294ed7d06e629, type: 3}
+  m_Name: 5127746c-ca93-4be8-87c1-a5ed6ba5230e
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogo.DialogoNode
+  isPlayerSpeaking: 0
+  speakerName:
+    translations:
+    - language: 34
+      text: Dolors
+    - language: 10
+      text: 
+  dialogo:
+    translations:
+    - language: 34
+      text: "Primera jornada  \xB7  Mostrador de atenci\xF3n"
+    - language: 10
+      text: 
+  followingCard: {fileID: 11400000, guid: f843b74d7ec23da4bbba0dd36fceb2eb, type: 2}
+  leftCardDestination: {fileID: -4508356709927735067}
+  rightCardDestination: {fileID: -2422557843807868437}
+  respuestas: []
+  rect:
+    serializedVersion: 2
+    x: 60
+    y: 350
+    width: 200
+    height: 160

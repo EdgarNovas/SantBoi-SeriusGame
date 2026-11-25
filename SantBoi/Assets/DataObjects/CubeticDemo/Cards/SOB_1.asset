@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df99ee2981a2cf43ab094daf087200b, type: 3}
+  m_Name: SOB_1
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  id: SOB_1
+  character: {fileID: 11400000, guid: 9759b7e6baae5a84cb06d673c47bafa4, type: 2}
+  scene: Oficina
+  text: Marc lleva semanas saliendo tarde. Hoy ha enviado un informe con datos de
+    otro expediente y no se ha dado cuenta.
+  mainValue: 5
+  difficulty: 1
+  debrief: "Arreglar el problema frente a cuidar a la persona. Tercera v\xEDa: corregirlo
+    juntos para que \xE9l vea el error sin sentirse se\xF1alado."
+  left:
+    text: "Se lo digo en privado y le pregunto c\xF3mo est\xE1."
+    effects:
+    - value: 5
+      amount: 10
+    - value: 4
+      amount: 5
+    - value: 0
+      amount: -5
+  right:
+    text: Lo corrijo yo sin decir nada.
+    effects:
+    - value: 0
+      amount: 10
+    - value: 5
+      amount: -5
+    - value: 1
+      amount: -10
